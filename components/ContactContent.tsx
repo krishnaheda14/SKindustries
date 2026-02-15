@@ -157,10 +157,10 @@ export default function ContactContent() {
           </div>
         </div>
 
-        {/* Map */}
+        {/* Map - centered on SK Industries with a pinned marker */}
         <div className="mt-12 sm:mt-14 md:mt-16 card overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8!2d74.7475!3d19.0945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcb0e2e2a2a2a3%3A0x1234567890abcdef!2sSavedi%20Naka%2C%20Ahmednagar%2C%20Maharashtra%20414003!5e0!3m2!1sen!2sin!4v1234567890123"
+            src="https://maps.google.com/maps?q=19.0945,74.7475&z=17&output=embed"
             width="100%"
             height="400"
             className="sm:h-[450px] md:h-[500px]"

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Categories() {
   const categories = [
     {
@@ -24,6 +26,7 @@ export default function Categories() {
       title: 'Laser Cutting',
       description: 'Precision cutting services for custom designs',
       image: '/images/gallery/gallery-page-2.jpg',
+      href: '/designs'
     },
   ]
 
@@ -42,21 +45,31 @@ export default function Categories() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((category, index) => (
-            <div key={index} className="card group fade-in-up scale-in" style={{ animationDelay: `${index * 0.12}s` }}>
-              <div className="aspect-video overflow-hidden bg-gray-200">
-                <img
-                  src={category.image}
-                  alt={category.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+          {categories.map((category, index) => {
+            const card = (
+              <div className="card group fade-in-up scale-in" style={{ animationDelay: `${index * 0.12}s` }}>
+                <div className="aspect-video overflow-hidden bg-gray-200">
+                  <img
+                    src={category.image}
+                    alt={category.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-2 text-black">{category.title}</h3>
+                  <p className="text-gray-600">{category.description}</p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2 text-black">{category.title}</h3>
-                <p className="text-gray-600">{category.description}</p>
-              </div>
-            </div>
-          ))}
+            )
+
+            return category.href ? (
+              <Link key={index} href={category.href} className="block">
+                {card}
+              </Link>
+            ) : (
+              <div key={index}>{card}</div>
+            )
+          })}
         </div>
       </div>
     </section>

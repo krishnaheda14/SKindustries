@@ -1,0 +1,40 @@
+{
+  "6 inch": {
+    "size": "6 inch",
+    "material": [
+      "ZINCRO",
+      "GI"
+    ],
+    "products": [
+      {
+        "name": "Material: GI, Zincro",
+        "type": "Plain",
+        "image": null
+      }
+    ]
+  },
+  "5 inch": {
+    "size": "5 inch",
+    "material": [
+      "GI"
+    ],
+    "products": [
+      {
+        "name": "Material: GI",
+        "type": "Deluxe",
+        "image": null
+      }
+    ]
+  },
+  "4 inch": {
+    "size": "4 inch",
+    "material": [],
+    "products": [
+      {
+        "name": "page-3",
+        "type": "Plain",
+        "image": null
+      }
+    ]
+  }
+}

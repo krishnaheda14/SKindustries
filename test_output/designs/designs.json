@@ -1,0 +1,38 @@
+[
+  {
+    "design_code": "D1",
+    "category": null,
+    "style": null,
+    "image": "images/designs/d1.png"
+  },
+  {
+    "design_code": "D2",
+    "category": null,
+    "style": null,
+    "image": "images/designs/d2.png"
+  },
+  {
+    "design_code": "D3",
+    "category": null,
+    "style": null,
+    "image": "images/designs/d3.png"
+  },
+  {
+    "design_code": "D4",
+    "category": null,
+    "style": null,
+    "image": "images/designs/d4.png"
+  },
+  {
+    "design_code": "D5",
+    "category": null,
+    "style": null,
+    "image": "images/designs/d5.png"
+  },
+  {
+    "design_code": "D142",
+    "category": null,
+    "style": null,
+    "image": "images/designs/d142.png"
+  }
+]

@@ -1,0 +1,27 @@
+# Cloudflare Pages Ignore File
+# Tell Cloudflare to ignore Python scripts and dependencies
+# (These are only for local PDF extraction, not needed for deployment)
+
+# Python scripts
+scripts/
+*.py
+*.pyc
+__pycache__/
+
+# Python environment
+.venv/
+venv/
+env/
+
+# Python outputs
+output_designs/
+output_products/
+test_output/
+
+# PDF source files
+*.pdf
+
+# Development files
+.git/
+.next/
+node_modules/

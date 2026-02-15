@@ -11,9 +11,9 @@ f:/skind/
 ├── scripts/
 │   ├── extract_products.py   # Product catalogue extractor
 │   ├── extract_designs.py    # Design library extractor
+│   ├── requirements.txt      # Python dependencies (for local extraction only)
 │   └── utils.py              # Helper functions
 ├── test_extractors.py        # Test suite (already run successfully)
-├── requirements.txt          # Python dependencies
 └── README.md                 # Project overview
 ```
 

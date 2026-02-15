@@ -87,10 +87,6 @@ export default function CatalogueContent() {
                             src={product.image}
                             alt={product.name}
                             className="w-full h-full object-contain"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
-                            }}
                           />
                         </div>
                       )}
@@ -118,10 +114,6 @@ export default function CatalogueContent() {
                     src={design.image}
                     alt={design.design_code}
                     className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                    }}
                   />
                 </div>
                 <div className="p-2 text-center">

@@ -209,4 +209,64 @@ def main(pdf_path, out_dir):
                 # Step 3: Render at high quality with 2x zoom
                 mat = fitz.Matrix(2, 2)  # 2x zoom for better quality
                 pix = page.get_pixmap(
-                    matrix=m
+                    matrix=mat, 
+                    clip=crop, 
+                    colorspace=fitz.csRGB,
+                    alpha=False
+                )
+                
+                # Step 4: Save with enhancement
+                name = sanitize_filename(code) + ".png"
+                outpath = images_dir / name
+                
+                enhance_image(pix, str(outpath))
+                
+                designs.append({
+                    "design_code": code,
+                    "category": None,
+                    "style": None,
+                    "image": f"images/designs/{name}"
+                })
+                
+                print(f"  ✓ Extracted {code}")
+                
+            except Exception as e:
+                print(f"  ✗ Failed to extract {code}: {e}")
+                # Last resort fallback: try to extract first page image
+                try:
+                    imgs = page.get_images(full=True)
+                    if imgs:
+                        xref = imgs[0][0]
+                        imgdict = doc.extract_image(xref)
+                        name = sanitize_filename(code) + "." + imgdict.get("ext", "jpg")
+                        outpath = images_dir / name
+                        with open(outpath, "wb") as f:
+                            f.write(imgdict["image"])
+                        designs.append({
+                            "design_code": code,
+                            "category": None,
+                            "style": None,
+                            "image": f"images/designs/{name}"
+                        })
+                        print(f"  ⚠ {code} extracted using fallback method")
+                except Exception as e2:
+                    print(f"  ✗✗ Complete failure for {code}: {e2}")
+
+    # Save JSON
+    out_json = out_dir / "designs.json"
+    with open(out_json, "w", encoding="utf-8") as f:
+        json.dump(designs, f, ensure_ascii=False, indent=2)
+
+    print(f"\n✅ Extraction complete!")
+    print(f"📊 Total designs extracted: {len(designs)}")
+    print(f"📁 Output: {out_json}")
+    print(f"🖼️  Images: {images_dir}")
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 3:
+        print("Usage: python scripts/extract_designs.py <designs.pdf> <out_dir>")
+        sys.exit(1)
+    pdf_path = sys.argv[1]
+    out_dir = sys.argv[2]
+    main(pdf_path, out_dir)

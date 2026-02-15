@@ -1,0 +1,7 @@
+# Cloudflare Pages - Next.js Static Export
+
+$schema: https://developers.cloudflare.com/pages/platform/build-configuration/
+framework: next
+build_command: npm run build
+build_output_directory: out
+node_version: 18

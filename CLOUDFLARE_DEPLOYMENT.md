@@ -2,6 +2,8 @@
 
 ## Quick Start
 
+> **Note**: The website deployment **does not require Python**. Python dependencies in `scripts/requirements.txt` are only for running the local PDF extraction scripts. The website is a static Next.js site that only needs Node.js.
+
 ### 1. Commit and Push to GitHub
 
 ```powershell

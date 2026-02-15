@@ -54,6 +54,15 @@
 }
 
 @layer utilities {
+  /* Cursor Styles */
+  .cursor-zoom-in {
+    cursor: zoom-in !important;
+  }
+  
+  .cursor-zoom-out {
+    cursor: zoom-out !important;
+  }
+  
   /* Animated Gradient Background */
   .gradient-bg {
     @apply bg-gradient-to-br from-industrial-dark via-industrial-steel to-gray-900;

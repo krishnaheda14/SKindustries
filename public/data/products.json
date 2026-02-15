@@ -1,4 +1,103 @@
 {
+  "3inch": {
+    "size": "3inch",
+    "material": [
+      "GI"
+    ],
+    "products": [
+      {
+        "name": "Deluxe Lining",
+        "type": "D\u00e9luxe",
+        "image": "/images/products/3-deluxe-lining.png"
+      },
+      {
+        "name": "Hole Perforated",
+        "type": "Perforated",
+        "image": "/images/products/3-hole-perforated.png"
+      },
+      {
+        "name": "Laxmi No 1",
+        "type": "Design",
+        "image": "/images/products/3-laxmi-no-1.png"
+      },
+      {
+        "name": "Laxmi No 2",
+        "type": "Design",
+        "image": "/images/products/3-laxmi-no-2.png"
+      },
+      {
+        "name": "O Hole Perforated",
+        "type": "Perforated",
+        "image": "/images/products/3-O-hole-perforated.png"
+      },
+      {
+        "name": "Plain Patti",
+        "type": "Plain",
+        "image": "/images/products/3-plain-patti.png"
+      },
+      {
+        "name": "Regular Super Round Patti Perforated",
+        "type": "Perforated",
+        "image": "/images/products/3-regular-super-round-patti-perforated.png"
+      },
+      {
+        "name": "Regular Super Round",
+        "type": "Design",
+        "image": "/images/products/3-regular-super-round.png"
+      },
+      {
+        "name": "Slot Design",
+        "type": "Design",
+        "image": "/images/products/3-slot-design.png"
+      }
+    ]
+  },
+  "4inch": {
+    "size": "4inch",
+    "material": [
+      "GI"
+    ],
+    "products": [
+      {
+        "name": "Vikas Deluxe",
+        "type": "D\u00e9luxe",
+        "image": "/images/products/4-vikas-deluxe.png"
+      },
+      {
+        "name": "Vikas Perforated",
+        "type": "Perforated",
+        "image": "/images/products/4-vikas-perforated.png"
+      },
+      {
+        "name": "Vikas Plain",
+        "type": "Plain",
+        "image": "/images/products/4-vikas-plain.png"
+      }
+    ]
+  },
+  "5inch": {
+    "size": "5inch",
+    "material": [
+      "GI"
+    ],
+    "products": [
+      {
+        "name": "Perforated Patti(Ganesh Perfor",
+        "type": "Perforated",
+        "image": "/images/products/5-perforated-patti(ganesh-perfor.png"
+      },
+      {
+        "name": "Plain Patti(Ganesh Plain)",
+        "type": "Plain",
+        "image": "/images/products/5-plain-patti(ganesh-plain).png"
+      },
+      {
+        "name": "Ganesh Deluxe With Lining",
+        "type": "D\u00e9luxe",
+        "image": "/images/products/5ganesh-deluxe-with-lining.png"
+      }
+    ]
+  },
   "6inch": {
     "size": "6inch",
     "material": [
@@ -6,112 +105,14 @@
     ],
     "products": [
       {
+        "name": "Jumboperforated",
+        "type": "Perforated",
+        "image": "/images/products/6-jumboperforated.png"
+      },
+      {
         "name": "Plain Patti(Jumbo)",
         "type": "Plain",
-        "image": "images/products/product-001-6-plain-patti(jumbo).png"
-      },
-      {
-        "name": "Perforated Patti (Jumbo Perforated)",
-        "type": "Perforated",
-        "image": "images/products/product-001-6-plain-patti(jumbo).png"
-      }
-    ]
-  },
-  "5inch": {
-    "size": "5inch",
-    "material": [
-      "GI",
-      "ZINCRO"
-    ],
-    "products": [
-      {
-        "name": "Plain Patti(Ganesh Plain)",
-        "type": "Plain",
-        "image": "images/products/product-002-5-plain-patti(ganesh-plain).png"
-      },
-      {
-        "name": "Deluxe Patti(With Lining)(Ganesh Deluxe)",
-        "type": "Deluxe",
-        "image": "images/products/product-002-5-plain-patti(ganesh-plain).png"
-      }
-    ]
-  },
-  "unknown": {
-    "size": "unknown",
-    "material": [],
-    "products": [
-      {
-        "name": "Perforated patti(Ganesh Perforated)",
-        "type": "Perforated",
-        "image": "images/products/product-003-unknown-perforated-patti(ganesh-perfor.png"
-      },
-      {
-        "name": "Vikas Perforated",
-        "type": "Perforated",
-        "image": "images/products/product-005-unknown-vikas-perforated.png"
-      },
-      {
-        "name": "Plain Patti",
-        "type": "Plain",
-        "image": "images/products/product-007-unknown-plain-patti.png"
-      },
-      {
-        "name": "Deluxe Patti(With Lining)(Ganesh Deluxe)",
-        "type": "Deluxe",
-        "image": "images/products/product-007-unknown-plain-patti.png"
-      },
-      {
-        "name": "Laxmi No.1 Design Patti",
-        "type": "Laxmi",
-        "image": "images/products/product-007-unknown-plain-patti.png"
-      },
-      {
-        "name": "Laxmi No.2 Design Patti",
-        "type": "Laxmi",
-        "image": "images/products/product-008-unknown-laxmi-no.2-design-patti.png"
-      },
-      {
-        "name": "Slot Design Patti",
-        "type": "Slot",
-        "image": "images/products/product-008-unknown-laxmi-no.2-design-patti.png"
-      }
-    ]
-  },
-  "4inch": {
-    "size": "4inch",
-    "material": [
-      "GI",
-      "ZINCRO"
-    ],
-    "products": [
-      {
-        "name": "Vikas Plain",
-        "type": "Plain",
-        "image": "images/products/product-004-4-vikas-plain.png"
-      },
-      {
-        "name": "Vikas Deluxe",
-        "type": "Deluxe",
-        "image": "images/products/product-004-4-vikas-plain.png"
-      }
-    ]
-  },
-  "3inch": {
-    "size": "3inch",
-    "material": [
-      "GI",
-      "ZINCRO"
-    ],
-    "products": [
-      {
-        "name": "Regular Super round Patti",
-        "type": "Plain",
-        "image": "images/products/product-006-3-regular-super-round-patti.png"
-      },
-      {
-        "name": "‘O’Perforated Patti (Available in SR and Plain Design)",
-        "type": "Plain",
-        "image": "images/products/product-006-3-regular-super-round-patti.png"
+        "image": "/images/products/6-plain-patti(jumbo).png"
       }
     ]
   }

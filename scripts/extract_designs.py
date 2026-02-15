@@ -25,24 +25,58 @@ from scripts.utils import sanitize_filename, ensure_dir
 
 CODE_RE = re.compile(r"\bD\s*0*(\d{1,4})\b", re.I)
 
-def enhance_image(pix, outpath):
+def is_dark_image(img):
+    """Check if image is too dark by analyzing average brightness."""
+    try:
+        # Convert to grayscale if needed
+        if img.mode != 'L':
+            gray = img.convert('L')
+        else:
+            gray = img
+        
+        # Calculate average brightness (0-255)
+        import statistics
+        pixels = list(gray.getdata())
+        avg_brightness = statistics.mean(pixels)
+        
+        # Consider dark if average brightness < 100
+        return avg_brightness < 100
+    except:
+        return False
+
+def enhance_image(pix, outpath, aggressive=False):
     """Apply brightness and contrast enhancement to make designs clearer."""
     try:
         # Convert PyMuPDF pixmap to PIL Image
         img_data = pix.tobytes("png")
         img = Image.open(io.BytesIO(img_data))
         
-        # Enhance brightness (+20%)
-        enhancer = ImageEnhance.Brightness(img)
-        img = enhancer.enhance(1.2)
+        # Check if image is dark
+        is_dark = is_dark_image(img)
         
-        # Enhance contrast (+15%)
-        contrast = ImageEnhance.Contrast(img)
-        img = contrast.enhance(1.15)
+        # Apply more aggressive enhancement for dark images
+        if is_dark or aggressive:
+            print(f"    Applying aggressive enhancement (dark image detected)")
+            # Enhance brightness (+40% for dark images)
+            enhancer = ImageEnhance.Brightness(img)
+            img = enhancer.enhance(1.5)
+            
+            # Enhance contrast (+30%)
+            contrast = ImageEnhance.Contrast(img)
+            img = contrast.enhance(1.4)
+        else:
+            # Normal enhancement
+            # Enhance brightness (+25%)
+            enhancer = ImageEnhance.Brightness(img)
+            img = enhancer.enhance(1.25)
+            
+            # Enhance contrast (+20%)
+            contrast = ImageEnhance.Contrast(img)
+            img = contrast.enhance(1.2)
         
-        # Enhance sharpness (+10%)
+        # Enhance sharpness (+15%)
         sharpness = ImageEnhance.Sharpness(img)
-        img = sharpness.enhance(1.1)
+        img = sharpness.enhance(1.15)
         
         # Save enhanced image
         img.save(outpath, quality=95, optimize=True)
@@ -165,23 +199,43 @@ def main(pdf_path, out_dir):
         
         if not codes:
             print(f"Page {pno+1}: No codes found, extracting images directly")
-            # Fallback: extract all images on page
+            # Fallback: extract all images on page, filtering out tiny ones
             imgs = page.get_images(full=True)
             idx = 1
             for im in imgs:
                 xref = im[0]
                 imgdict = doc.extract_image(xref)
+                
+                # Skip tiny images (bullets, icons, etc) - less than 10KB
+                if len(imgdict["image"]) < 10240:
+                    print(f"  Skipping tiny image ({len(imgdict['image'])} bytes)")
+                    continue
+                
                 name = sanitize_filename(f"page{pno+1}-img{idx}") + "." + imgdict.get("ext", "jpg")
                 outpath = images_dir / name
                 
-                # Save with enhancement if possible
+                # Save with aggressive enhancement
                 try:
                     img = Image.open(io.BytesIO(imgdict["image"]))
-                    # Enhance
-                    enhancer = ImageEnhance.Brightness(img)
-                    img = enhancer.enhance(1.2)
-                    contrast = ImageEnhance.Contrast(img)
-                    img = contrast.enhance(1.15)
+                    
+                    # Check if dark and apply aggressive enhancement
+                    is_dark = is_dark_image(img)
+                    if is_dark:
+                        print(f"  Dark image detected, applying aggressive enhancement")
+                        enhancer = ImageEnhance.Brightness(img)
+                        img = enhancer.enhance(1.5)
+                        contrast = ImageEnhance.Contrast(img)
+                        img = contrast.enhance(1.4)
+                    else:
+                        enhancer = ImageEnhance.Brightness(img)
+                        img = enhancer.enhance(1.25)
+                        contrast = ImageEnhance.Contrast(img)
+                        img = contrast.enhance(1.2)
+                    
+                    # Sharpness
+                    sharpness = ImageEnhance.Sharpness(img)
+                    img = sharpness.enhance(1.15)
+                    
                     img.save(outpath, quality=95)
                 except:
                     with open(outpath, "wb") as f:
@@ -191,7 +245,7 @@ def main(pdf_path, out_dir):
                     "design_code": name.replace('.', '_'),
                     "category": None,
                     "style": None,
-                    "image": f"images/designs/{name}"
+                    "image": f"/images/designs/{name}"
                 })
                 idx += 1
             continue
@@ -219,13 +273,13 @@ def main(pdf_path, out_dir):
                 name = sanitize_filename(code) + ".png"
                 outpath = images_dir / name
                 
-                enhance_image(pix, str(outpath))
+                enhance_image(pix, str(outpath), aggressive=True)
                 
                 designs.append({
                     "design_code": code,
                     "category": None,
                     "style": None,
-                    "image": f"images/designs/{name}"
+                    "image": f"/images/designs/{name}"
                 })
                 
                 print(f"  ✓ Extracted {code}")
@@ -240,13 +294,31 @@ def main(pdf_path, out_dir):
                         imgdict = doc.extract_image(xref)
                         name = sanitize_filename(code) + "." + imgdict.get("ext", "jpg")
                         outpath = images_dir / name
-                        with open(outpath, "wb") as f:
-                            f.write(imgdict["image"])
+                        # Apply enhancement to fallback too
+                        try:
+                            img = Image.open(io.BytesIO(imgdict["image"]))
+                            is_dark = is_dark_image(img)
+                            if is_dark:
+                                enhancer = ImageEnhance.Brightness(img)
+                                img = enhancer.enhance(1.5)
+                                contrast = ImageEnhance.Contrast(img)
+                                img = contrast.enhance(1.4)
+                            else:
+                                enhancer = ImageEnhance.Brightness(img)
+                                img = enhancer.enhance(1.25)
+                                contrast = ImageEnhance.Contrast(img)
+                                img = contrast.enhance(1.2)
+                            sharpness = ImageEnhance.Sharpness(img)
+                            img = sharpness.enhance(1.15)
+                            img.save(outpath, quality=95)
+                        except:
+                            with open(outpath, "wb") as f:
+                                f.write(imgdict["image"])
                         designs.append({
                             "design_code": code,
                             "category": None,
                             "style": None,
-                            "image": f"images/designs/{name}"
+                            "image": f"/images/designs/{name}"
                         })
                         print(f"  ⚠ {code} extracted using fallback method")
                 except Exception as e2:

@@ -23,7 +23,7 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <div className="text-black text-base sm:text-lg font-bold">SK Industries</div>
-              <div className="text-gray-600 text-xs">Est. 1981</div>
+              <div className="text-gray-600 text-xs">Est. 1987</div>
             </div>
           </Link>
           

@@ -86,7 +86,8 @@ export default function ContactContent() {
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">SK Industries</h2>
-                  <p className="text-gray-600 text-sm sm:text-base">Est. 1981</p>
+                  <p className="text-gray-600 text-sm sm:text-base">Est. 1987</p>
+                  <p className="text-gray-500 text-xs sm:text-sm font-mono">GSTIN: 27ARAPS8931K1Z9</p>
                 </div>
               </div>
               <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
@@ -120,7 +121,8 @@ export default function ContactContent() {
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">AS Industries</h2>
-                  <p className="text-gray-600 text-sm sm:text-base">Est. 1981</p>
+                  <p className="text-gray-600 text-sm sm:text-base">Est. 1987</p>
+                  <p className="text-gray-500 text-xs sm:text-sm font-mono">GSTIN: 27OHUPS6745F1Z7</p>
                 </div>
               </div>
               <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">

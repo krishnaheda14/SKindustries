@@ -9,10 +9,10 @@ export default function Categories() {
   const [frenchDoorOpen, setFrenchDoorOpen] = useState(false)
 
   const shutterPattiSizes = [
-    { size: '6"', description: 'Heavy-duty designs for maximum security', image: '/images/products/6-plain-patti(jumbo).png' },
-    { size: '5"', description: 'Perfect balance of strength and aesthetics', image: '/images/products/5-plain-patti(ganesh-plain).png' },
-    { size: '4"', description: 'Versatile options for standard applications', image: '/images/products/4-vikas-plain.png' },
-    { size: '3"', description: 'Compact designs with elegant profiles', image: '/images/products/3-regular-super-round.png' },
+    { size: '6"', sizeKey: '6inch', description: 'Heavy-duty designs for maximum security', image: '/images/products/6-plain-patti(jumbo).png' },
+    { size: '5"', sizeKey: '5inch', description: 'Perfect balance of strength and aesthetics', image: '/images/products/5-plain-patti(ganesh-plain).png' },
+    { size: '4"', sizeKey: '4inch', description: 'Versatile options for standard applications', image: '/images/products/4-vikas-plain.png' },
+    { size: '3"', sizeKey: '3inch', description: 'Compact designs with elegant profiles', image: '/images/products/3-regular-super-round.png' },
   ]
 
   const fittingMaterials = [
@@ -56,13 +56,31 @@ export default function Categories() {
               {shutterPattiOpen && (
                 <div className="mt-6 space-y-4 animate-fade-in">
                   {shutterPattiSizes.map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-red-100">
-                      <img src={item.image} alt={`${item.size} Patti`} className="w-20 h-20 object-cover rounded-lg" />
-                      <div>
-                        <div className="font-bold text-xl text-red-600">{item.size} Patti</div>
-                        <div className="text-sm text-gray-600">{item.description}</div>
+                    <Link key={idx} href={`/catalogue?size=${item.sizeKey}`} className="block">
+                      <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-red-100 hover:border-red-400 hover:scale-[1.02] cursor-pointer">
+                        <img src={item.image} alt={`${item.size} Patti`} className="w-20 h-20 object-cover rounded-lg" />
+                        <div className="flex-1">
+                          <div className="font-bold text-xl text-red-600 mb-1">{item.size} Patti</div>
+                          <div className="text-sm text-gray-600 mb-2">{item.description}</div>
+                          <div className="space-y-1">
+                            <p className="text-xs font-semibold text-gray-800">
+                              <span className="font-bold">Available in:</span> Galvanized (GI) and Zincro
+                            </p>
+                            <p className="text-xs font-semibold text-gray-800">
+                              <span className="font-bold">Thickness:</span> 0.7mm to 0.9mm
+                            </p>
+                            {item.size === '3"' && (
+                              <p className="text-xs font-semibold text-red-600">
+                                <span className="font-bold">Designs:</span> Super Round and Plain
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <svg className="w-6 h-6 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                   <Link href="/catalogue" className="block mt-4">
                     <button className="w-full btn-primary text-center">View All Designs</button>
@@ -98,10 +116,6 @@ export default function Categories() {
                   {/* Placeholder for fitting material image */}
                   <div className="mb-6 rounded-lg overflow-hidden shadow-sm">
                     <img src="/images/fitting-material.jpeg" alt="Shutter Fitting Material" className="w-full h-56 object-cover" />
-                    <div className="p-3 bg-white border-t border-red-50 text-center">
-                      <p className="text-gray-600 text-sm">Shutter fitting material sample</p>
-                      <p className="text-xs text-gray-500 mt-1">Path: /public/images/fitting-material.jpeg</p>
-                    </div>
                   </div>
                   
                   <ul className="space-y-3">
@@ -163,10 +177,6 @@ export default function Categories() {
                   {/* Placeholder for french door image */}
                   <div className="mb-6 rounded-lg overflow-hidden shadow-sm">
                     <img src="/images/french-door.jpeg" alt="French Door Section" className="w-full h-56 object-cover" />
-                    <div className="p-3 bg-white border-t border-red-50 text-center">
-                      <p className="text-gray-600 text-sm">French door section sample</p>
-                      <p className="text-xs text-gray-500 mt-1">Path: /public/images/french-door.jpeg</p>
-                    </div>
                   </div>
 
                   <div className="space-y-4">

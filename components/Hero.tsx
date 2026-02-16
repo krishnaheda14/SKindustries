@@ -28,13 +28,19 @@ export default function Hero() {
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
         <div className="max-w-4xl relative z-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-5 text-red-600 fade-in-up">
+            Where Precision Metal Solutions Come Together
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-7 md:mb-8 fade-in-up stagger-1 leading-relaxed">
+            Since 1987, SKI – SK Industries and ASI – AS Industries deliver complete solutions in industrial shutter systems, precision door sections, and custom laser cutting designs. With strong fabrication expertise and dependable supply capability, we provide durable, high-quality metal products tailored for commercial and industrial applications.
+          </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-5 md:mb-6 leading-tight fade-in-up float">
             <span className="bg-gradient-to-r from-red-700 via-red-600 to-red-700 bg-clip-text text-transparent">
               Premium Rolling Shutter Solutions
             </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-6 sm:mb-7 md:mb-8 fade-in-up stagger-1">
-            Manufacturing excellence since 1981. Trusted by thousands for quality raw materials and precision laser cutting.
+            Manufacturing excellence since 1987. Trusted by thousands for quality raw materials and precision laser cutting.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 fade-in-up stagger-2">
             <a href="/catalogue" className="btn-primary text-center pulse-glow text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4">

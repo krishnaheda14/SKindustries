@@ -2,7 +2,7 @@ export default function Features() {
   const features = [
     {
       title: '40+ Years Experience',
-      description: 'Trusted manufacturer since 1981 with unmatched industry expertise',
+      description: 'Trusted manufacturer since 1987 with unmatched industry expertise',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />

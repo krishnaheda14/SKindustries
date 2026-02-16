@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 interface GalleryPage {
   page: number
@@ -8,6 +9,7 @@ interface GalleryPage {
 }
 
 export default function CatalogueContent() {
+  const searchParams = useSearchParams()
   const [productsData, setProductsData] = useState<any>(null)
   const [galleryPages] = useState<GalleryPage[]>(
     Array.from({ length: 12 }, (_, i) => ({
@@ -21,6 +23,14 @@ export default function CatalogueContent() {
   const [selectedSize, setSelectedSize] = useState<string>('all')
   const [sortBy, setSortBy] = useState<string>('name')
   const [zoomedImage, setZoomedImage] = useState<string | null>(null)
+
+  useEffect(() => {
+    // Check for size parameter in URL
+    const sizeParam = searchParams.get('size')
+    if (sizeParam) {
+      setSelectedSize(sizeParam)
+    }
+  }, [searchParams])
 
   useEffect(() => {
     setLoading(true)
@@ -240,9 +250,22 @@ export default function CatalogueContent() {
                         {product.size}
                       </span>
                     </div>
-                    <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-red-600 to-red-500 text-white text-xs sm:text-sm rounded-full shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+                    <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 mb-3 bg-gradient-to-r from-red-600 to-red-500 text-white text-xs sm:text-sm rounded-full shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
                       {product.type}
                     </span>
+                    <div className="mt-3 pt-3 border-t border-red-100 space-y-1.5">
+                      <p className="text-xs font-bold text-gray-800">
+                        Available: <span className="font-semibold">GI & Zincro</span>
+                      </p>
+                      <p className="text-xs font-bold text-gray-800">
+                        Thickness: <span className="font-semibold">0.7mm - 0.9mm</span>
+                      </p>
+                      {product.size === '3"' && (
+                        <p className="text-xs font-bold text-red-600">
+                          Designs: <span className="font-semibold">Super Round & Plain</span>
+                        </p>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

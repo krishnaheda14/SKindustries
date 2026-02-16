@@ -1,9 +1,19 @@
-'use client'
+"use client"
 
 import { useState, useEffect } from 'react'
 
 export default function Hero() {
   const [mousePos, setMousePos] = useState({ x: 50, y: 50 })
+
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth) * 100
+      const y = (e.clientY / window.innerHeight) * 100
+      setMousePos({ x, y })
+    }
+    window.addEventListener('mousemove', onMove)
+    return () => window.removeEventListener('mousemove', onMove)
+  }, [])
 
   return (
     <section
@@ -59,17 +69,6 @@ export default function Hero() {
       {/* Subtle decorative elements */}
       <div className="absolute top-0 right-0 w-44 sm:w-56 md:w-72 h-44 sm:h-56 md:h-72 bg-red-600 opacity-6 rounded-full blur-3xl float"></div>
       <div className="absolute bottom-0 left-0 w-44 sm:w-56 md:w-72 h-44 sm:h-56 md:h-72 bg-red-500 opacity-6 rounded-full blur-3xl float" style={{ animationDelay: '1s' }}></div>
-    </section>
-  )
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      {/* Animated Decorative Elements */}
-      <div className="absolute top-0 right-0 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-red-600 opacity-10 rounded-full blur-3xl float"></div>
-      <div className="absolute bottom-0 left-0 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-red-500 opacity-15 rounded-full blur-3xl float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 right-1/4 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-red-400 opacity-5 rounded-full blur-2xl float" style={{ animationDelay: '2s' }}></div>
     </section>
   )
 }

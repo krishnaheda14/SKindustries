@@ -114,8 +114,8 @@ export default function Categories() {
               {fittingMaterialOpen && (
                 <div className="mt-6 animate-fade-in">
                   {/* Placeholder for fitting material image */}
-                  <div className="mb-6 rounded-lg overflow-hidden shadow-sm">
-                    <img src="/images/fitting-material.jpeg" alt="Shutter Fitting Material" className="w-full h-56 object-cover" />
+                  <div className="mb-6 rounded-lg overflow-visible bg-gray-50 p-3 flex items-center justify-center">
+                    <img src="/images/fitting-material.jpeg" alt="Shutter Fitting Material" className="max-w-full max-h-72 object-contain" />
                   </div>
                   
                   <ul className="space-y-3">
@@ -135,12 +135,12 @@ export default function Categories() {
 
           {/* 3. Laser Cutting Designs Section */}
           <div className="card group fade-in-up scale-in stagger-2 bg-gradient-to-br from-white to-red-50 hover:scale-105 transition-all duration-300">
-            <Link href="/catalogue">
-              <div className="aspect-video overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+            <Link href="/catalogue?tab=gallery">
+              <div className="w-full overflow-visible bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center p-4">
                 <img
                   src="/images/gallery/gallery-page-2.jpg"
                   alt="Laser Cutting Designs"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="max-w-full max-h-64 object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-8">
@@ -175,8 +175,8 @@ export default function Categories() {
               {frenchDoorOpen && (
                 <div className="mt-6 animate-fade-in">
                   {/* Placeholder for french door image */}
-                  <div className="mb-6 rounded-lg overflow-hidden shadow-sm">
-                    <img src="/images/french-door.jpeg" alt="French Door Section" className="w-full h-56 object-cover" />
+                  <div className="mb-6 rounded-lg overflow-visible bg-gray-50 p-3 flex items-center justify-center">
+                    <img src="/images/french-door.jpeg" alt="French Door Section" className="max-w-full max-h-72 object-contain" />
                   </div>
 
                   <div className="space-y-4">

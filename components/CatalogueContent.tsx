@@ -25,10 +25,15 @@ export default function CatalogueContent() {
   const [zoomedImage, setZoomedImage] = useState<string | null>(null)
 
   useEffect(() => {
-    // Check for size parameter in URL
+    // Check for size and tab parameters in URL
     const sizeParam = searchParams.get('size')
+    const tabParam = searchParams.get('tab')
     if (sizeParam) {
       setSelectedSize(sizeParam)
+    }
+    if (tabParam) {
+      // Accept 'gallery' or 'products'
+      setActiveTab(tabParam === 'gallery' ? 'gallery' : 'products')
     }
   }, [searchParams])
 

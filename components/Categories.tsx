@@ -176,7 +176,7 @@ export default function Categories() {
                 <div className="mt-6 animate-fade-in">
                   {/* Placeholder for french door image */}
                   <div className="mb-6 rounded-lg overflow-visible bg-gray-50 p-3 flex items-center justify-center">
-                    <img src="/images/french-door.jpeg" alt="French Door Section" className="max-w-full max-h-72 object-contain" />
+                    <img src="/images/french-door.png" alt="French Door Section" className="max-w-full max-h-72 object-contain" />
                   </div>
 
                   <div className="space-y-4">

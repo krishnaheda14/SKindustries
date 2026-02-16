@@ -265,7 +265,7 @@ export default function CatalogueContent() {
                       <p className="text-xs font-bold text-gray-800">
                         Thickness: <span className="font-semibold">0.7mm - 0.9mm</span>
                       </p>
-                      {product.size === '3"' && (
+                      {product.category === '3inch' && (
                         <p className="text-xs font-bold text-red-600">
                           Designs: <span className="font-semibold">Super Round & Plain</span>
                         </p>

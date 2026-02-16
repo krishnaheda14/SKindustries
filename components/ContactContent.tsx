@@ -81,8 +81,8 @@ export default function ContactContent() {
             {/* SK Industries */}
             <div className="card p-5 sm:p-6 md:p-8">
               <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-industrial-accent rounded-lg flex items-center justify-center">
-                  <span className="text-industrial-dark font-bold text-lg sm:text-xl">SK</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center">
+                  <span className="text-red-600 font-bold text-lg sm:text-xl">SK</span>
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">SK Industries</h2>
@@ -91,7 +91,7 @@ export default function ContactContent() {
               </div>
               <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
                 <div className="flex items-start">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-industrial-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -102,10 +102,10 @@ export default function ContactContent() {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-industrial-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <a href="tel:+919422777786" className="hover:text-industrial-accent transition-colors">
+                  <a href="tel:+919422777786" className="hover:text-red-600 transition-colors">
                     +91 94227 77786
                   </a>
                 </div>
@@ -115,8 +115,8 @@ export default function ContactContent() {
             {/* AS Industries */}
             <div className="card p-5 sm:p-6 md:p-8">
               <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-industrial-steel rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg sm:text-xl">AS</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center">
+                  <span className="text-red-600 font-bold text-lg sm:text-xl">AS</span>
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">AS Industries</h2>
@@ -125,7 +125,7 @@ export default function ContactContent() {
               </div>
               <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
                 <div className="flex items-start">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-industrial-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -136,10 +136,10 @@ export default function ContactContent() {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-industrial-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <a href="tel:+919422777786" className="hover:text-industrial-accent transition-colors">
+                  <a href="tel:+919422777786" className="hover:text-red-600 transition-colors">
                     +91 94227 77786
                   </a>
                 </div>

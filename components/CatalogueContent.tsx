@@ -114,8 +114,8 @@ export default function CatalogueContent() {
             onClick={() => setActiveTab('products')}
             className={`group relative px-5 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg transition-all duration-500 transform ${
               activeTab === 'products'
-                ? 'bg-gradient-to-r from-industrial-accent to-yellow-500 text-industrial-dark scale-105 sm:scale-110 shadow-2xl'
-                : 'bg-white/80 backdrop-blur-sm text-industrial-dark hover:scale-105 shadow-lg hover:shadow-xl'
+                ? 'bg-gradient-to-r from-red-600 to-red-500 text-white scale-105 sm:scale-110 shadow-2xl'
+                : 'bg-white/80 backdrop-blur-sm text-black hover:scale-105 shadow-lg hover:shadow-xl border-2 border-red-200'
             }`}
           >
             <span className="relative z-10">Products</span>
@@ -128,8 +128,8 @@ export default function CatalogueContent() {
             onClick={() => setActiveTab('gallery')}
             className={`group relative px-5 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 rounded-xl font-bold text-sm sm:text-base md:text-lg transition-all duration-500 transform ${
               activeTab === 'gallery'
-                ? 'bg-gradient-to-r from-industrial-steel to-industrial-dark text-white scale-105 sm:scale-110 shadow-2xl'
-                : 'bg-white/80 backdrop-blur-sm text-industrial-dark hover:scale-105 shadow-lg hover:shadow-xl'
+                ? 'bg-gradient-to-r from-red-600 to-red-500 text-white scale-105 sm:scale-110 shadow-2xl'
+                : 'bg-white/80 backdrop-blur-sm text-black hover:scale-105 shadow-lg hover:shadow-xl border-2 border-red-200'
             }`}
           >
             <span className="relative z-10">Design Gallery</span>
@@ -142,25 +142,69 @@ export default function CatalogueContent() {
         {/* Products Tab with Filters */}
         {activeTab === 'products' && productsData && (
           <div className="space-y-12 sm:space-y-16 md:space-y-20">
-            {/* Filter and Sort Controls */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center fade-in-up stagger-3 mb-8">
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-                <select
-                  value={selectedSize}
-                  onChange={(e) => setSelectedSize(e.target.value)}
-                  className="px-4 sm:px-6 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-industrial-accent/20 text-industrial-dark font-semibold shadow-lg hover:shadow-xl transition-all cursor-pointer focus:ring-2 focus:ring-industrial-accent focus:outline-none text-sm sm:text-base"
-                >
-                  <option value="all">All Sizes</option>
-                  <option value="3inch">3"</option>
-                  <option value="4inch">4"</option>
-                  <option value="5inch">5"</option>
-                  <option value="6inch">6"</option>
-                </select>
-
+            {/* Filter and Sort Controls - Enhanced Size Buttons */}
+            <div className="space-y-6 mb-8 fade-in-up stagger-3">
+              <div className="text-center">
+                <h3 className="text-xl sm:text-2xl font-bold text-black mb-4">Filter by Size</h3>
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                  <button
+                    onClick={() => setSelectedSize('all')}
+                    className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedSize === 'all'
+                        ? 'bg-gradient-to-r from-red-600 to-red-500 text-white scale-110 shadow-2xl'
+                        : 'bg-white text-black border-2 border-red-300 hover:border-red-500 hover:scale-105 shadow-lg'
+                    }`}
+                  >
+                    All Sizes
+                  </button>
+                  <button
+                    onClick={() => setSelectedSize('3inch')}
+                    className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedSize === '3inch'
+                        ? 'bg-gradient-to-r from-red-600 to-red-500 text-white scale-110 shadow-2xl'
+                        : 'bg-white text-black border-2 border-red-300 hover:border-red-500 hover:scale-105 shadow-lg'
+                    }`}
+                  >
+                    3" Patti
+                  </button>
+                  <button
+                    onClick={() => setSelectedSize('4inch')}
+                    className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedSize === '4inch'
+                        ? 'bg-gradient-to-r from-red-600 to-red-500 text-white scale-110 shadow-2xl'
+                        : 'bg-white text-black border-2 border-red-300 hover:border-red-500 hover:scale-105 shadow-lg'
+                    }`}
+                  >
+                    4" Patti
+                  </button>
+                  <button
+                    onClick={() => setSelectedSize('5inch')}
+                    className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedSize === '5inch'
+                        ? 'bg-gradient-to-r from-red-600 to-red-500 text-white scale-110 shadow-2xl'
+                        : 'bg-white text-black border-2 border-red-300 hover:border-red-500 hover:scale-105 shadow-lg'
+                    }`}
+                  >
+                    5" Patti
+                  </button>
+                  <button
+                    onClick={() => setSelectedSize('6inch')}
+                    className={`px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 transform ${
+                      selectedSize === '6inch'
+                        ? 'bg-gradient-to-r from-red-600 to-red-500 text-white scale-110 shadow-2xl'
+                        : 'bg-white text-black border-2 border-red-300 hover:border-red-500 hover:scale-105 shadow-lg'
+                    }`}
+                  >
+                    6" Patti
+                  </button>
+                </div>
+              </div>
+              
+              <div className="flex justify-center">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 sm:px-6 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-industrial-steel/20 text-industrial-dark font-semibold shadow-lg hover:shadow-xl transition-all cursor-pointer focus:ring-2 focus:ring-industrial-steel focus:outline-none text-sm sm:text-base"
+                  className="px-4 sm:px-6 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-red-300 text-black font-semibold shadow-lg hover:shadow-xl transition-all cursor-pointer focus:ring-2 focus:ring-red-600 focus:outline-none text-sm sm:text-base"
                 >
                   <option value="name">Sort by Name</option>
                   <option value="type">Sort by Type</option>
@@ -187,16 +231,16 @@ export default function CatalogueContent() {
                       />
                     </div>
                   )}
-                  <div className="p-4 sm:p-5 md:p-6 bg-gradient-to-br from-white/90 to-gray-50/80 backdrop-blur-sm">
+                  <div className="p-4 sm:p-5 md:p-6 bg-gradient-to-br from-white/90 to-red-50/80 backdrop-blur-sm">
                     <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-bold text-base sm:text-lg md:text-xl text-industrial-dark group-hover:text-industrial-accent transition-colors duration-300 flex-1">
+                      <h3 className="font-bold text-base sm:text-lg md:text-xl text-black group-hover:text-red-600 transition-colors duration-300 flex-1">
                         {product.name}
                       </h3>
-                      <span className="ml-2 text-xs sm:text-sm font-bold text-industrial-steel bg-gray-100 px-2 py-1 rounded">
+                      <span className="ml-2 text-xs sm:text-sm font-bold text-white bg-red-600 px-2 py-1 rounded">
                         {product.size}
                       </span>
                     </div>
-                    <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-industrial-steel to-industrial-dark text-white text-xs sm:text-sm rounded-full shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+                    <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-red-600 to-red-500 text-white text-xs sm:text-sm rounded-full shadow-md group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
                       {product.type}
                     </span>
                   </div>
@@ -210,17 +254,17 @@ export default function CatalogueContent() {
         {activeTab === 'gallery' && galleryPages.length > 0 && (
           <div className="space-y-8 sm:space-y-10 md:space-y-12">
             <div className="text-center mb-8 sm:mb-10 md:mb-12 fade-in-up">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-industrial-accent via-yellow-500 to-industrial-accent bg-clip-text text-transparent glitter">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-red-600 via-red-500 to-red-600 bg-clip-text text-transparent glitter">
                 Design Gallery
               </h2>
-              <p className="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8">
+              <p className="text-gray-700 text-base sm:text-lg mb-6 sm:mb-8">
                 Browse our complete design catalog - Click any image to zoom
               </p>
               
               {/* Download Button */}
               <button
                 onClick={downloadCatalogue}
-                className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 bg-gradient-to-r from-industrial-accent to-yellow-500 text-industrial-dark font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 text-sm sm:text-base md:text-lg"
+                className="group relative px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-500 text-sm sm:text-base md:text-lg"
               >
                 <span className="relative z-10 flex items-center gap-2 justify-center">
                   <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -242,13 +286,13 @@ export default function CatalogueContent() {
                 >
                   <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-xl hover:shadow-3xl transition-all duration-500 bg-white/70 backdrop-blur-sm">
                     {/* Glowing Border Effect */}
-                    <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-industrial-accent via-yellow-500 to-industrial-steel opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl"></div>
+                    <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-red-700 opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl"></div>
                     
                     {/* Image Container */}
                     <div className="relative p-2 sm:p-3 md:p-4 bg-gradient-to-br from-gray-50/50 to-white/50 backdrop-blur-sm">
                       {imageLoading[page.image] !== false && (
                         <div className="absolute inset-0 flex items-center justify-center bg-gray-100/50">
-                          <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-industrial-accent border-t-transparent rounded-full animate-spin"></div>
+                          <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
                         </div>
                       )}
                       
@@ -279,12 +323,12 @@ export default function CatalogueContent() {
         {loading && (
           <div className="flex flex-col items-center justify-center py-32">
             <div className="relative">
-              <div className="w-24 h-24 border-8 border-gray-200 border-t-industrial-accent rounded-full animate-spin"></div>
+              <div className="w-24 h-24 border-8 border-gray-200 border-t-red-600 rounded-full animate-spin"></div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 border-8 border-gray-100 border-t-yellow-500 rounded-full animate-spin"></div>
+                <div className="w-16 h-16 border-8 border-gray-100 border-t-red-400 rounded-full animate-spin"></div>
               </div>
             </div>
-            <p className="mt-8 text-xl font-semibold text-gray-600 animate-pulse">
+            <p className="mt-8 text-xl font-semibold text-gray-700 animate-pulse">
               Loading catalogue...
             </p>
           </div>

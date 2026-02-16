@@ -59,7 +59,7 @@ export default function Features() {
   return (
     <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-gray-50 px-4 sm:px-6">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="section-title text-center fade-in-up text-3xl sm:text-4xl md:text-5xl">Why Choose Us</h2>
+        <h2 className="section-title text-center fade-in-up text-3xl sm:text-4xl md:text-5xl glitter">Why Choose Us</h2>
         <p className="section-subtitle text-center mb-10 sm:mb-12 md:mb-16 fade-in-up stagger-1 text-base sm:text-lg">
           Industry-leading expertise and quality you can trust
         </p>
@@ -68,16 +68,16 @@ export default function Features() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="group card p-5 sm:p-6 md:p-8 text-center hover:bg-gradient-to-br hover:from-industrial-accent/5 hover:to-yellow-500/5 scale-in shimmer"
+              className="group card p-5 sm:p-6 md:p-8 text-center hover:bg-gradient-to-br hover:from-red-50 hover:to-red-100 scale-in shimmer border-2 border-transparent hover:border-red-200"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 mb-4 sm:mb-5 md:mb-6 rounded-full bg-gradient-to-br from-industrial-accent to-yellow-500 text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 pulse-glow">
+              <div className="inline-flex items-center justify-center w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 mb-4 sm:mb-5 md:mb-6 rounded-full bg-gradient-to-br from-red-600 to-red-500 text-white group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 pulse-glow">
                 {feature.icon}
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-industrial-dark group-hover:text-industrial-accent transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-black group-hover:text-red-600 transition-colors duration-300">
                 {feature.title}
               </h3>
-              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                 {feature.description}
               </p>
             </div>

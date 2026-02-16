@@ -9,10 +9,15 @@ module.exports = {
     extend: {
       colors: {
         industrial: {
-          dark: '#2B2B2B',
-          steel: '#2F4F6F',
-          accent: '#D4AF37',
-          light: '#F5F5F5',
+          dark: '#1a1a1a',
+          steel: '#DC143C',
+          accent: '#DC143C',
+          light: '#FFFFFF',
+          red: {
+            primary: '#DC143C',
+            dark: '#B71C1C',
+            light: '#FF6B6B',
+          },
         },
       },
       fontFamily: {

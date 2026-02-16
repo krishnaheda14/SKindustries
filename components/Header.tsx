@@ -13,28 +13,44 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-industrial-dark shadow-lg">
+    <header className="sticky top-0 z-50 bg-white shadow-lg border-b-4 border-red-600">
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo Placeholder */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-industrial-accent rounded-lg flex items-center justify-center">
-              {/* LOGO PLACEHOLDER - Replace with actual logo */}
-              <span className="text-industrial-dark font-bold text-xl">SK</span>
+        {/* Dual Company Logos Section */}
+        <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 py-4 border-b border-gray-200">
+          <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center shadow-md">
+              {/* SK Industries Logo Placeholder */}
+              <span className="text-red-600 font-bold text-lg sm:text-xl">SK</span>
             </div>
-            <div className="hidden md:block">
-              <div className="text-white text-xl font-bold">SK Industries</div>
-              <div className="text-gray-400 text-xs">Est. 1981</div>
+            <div className="hidden sm:block">
+              <div className="text-black text-base sm:text-lg font-bold">SK Industries</div>
+              <div className="text-gray-600 text-xs">Est. 1981</div>
             </div>
           </Link>
+          
+          <div className="h-12 w-px bg-red-600"></div>
+          
+          <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center shadow-md">
+              {/* AS Industries Logo Placeholder */}
+              <span className="text-red-600 font-bold text-lg sm:text-xl">AS</span>
+            </div>
+            <div className="hidden sm:block">
+              <div className="text-black text-base sm:text-lg font-bold">AS Industries</div>
+              <div className="text-gray-600 text-xs">Quality Assured</div>
+            </div>
+          </Link>
+        </div>
 
+        {/* Navigation Section */}
+        <div className="flex items-center justify-between h-16">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 mx-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white hover:text-industrial-accent transition-colors duration-200 font-medium"
+                className="text-black hover:text-red-600 transition-colors duration-200 font-medium text-lg"
               >
                 {link.label}
               </Link>
@@ -52,7 +68,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-black p-2 absolute right-4"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileMenuOpen ? (
@@ -66,17 +82,25 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-700">
+          <div className="md:hidden py-4 border-t border-gray-200">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block py-2 text-white hover:text-industrial-accent transition-colors"
+                className="block py-2 text-black hover:text-red-600 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
+            <a
+              href="https://wa.me/919422777786"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-2 text-center btn-primary"
+            >
+              WhatsApp
+            </a>
           </div>
         )}
       </nav>

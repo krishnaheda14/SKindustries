@@ -144,7 +144,14 @@ export default function Categories() {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-bold mb-2 text-black group-hover:text-red-600 transition-colors duration-300">Laser Cutting Designs</h3>
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-3xl font-bold mb-2 text-black group-hover:text-red-600 transition-colors duration-300 flex items-center gap-3">
+                    Laser Cutting Designs
+                    <svg className="w-5 h-5 text-gray-500 group-hover:text-red-600 transition-transform duration-300 transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </h3>
+                </div>
                 <p className="text-gray-600 mb-4">Precision cutting for custom patterns and designs</p>
                 <button className="btn-primary w-full">View Design Gallery</button>
               </div>

@@ -18,9 +18,8 @@ export default function Header() {
         {/* Dual Company Logos Section */}
         <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 py-4 border-b border-gray-200">
           <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center shadow-md">
-              {/* SK Industries Logo Placeholder */}
-              <span className="text-red-600 font-bold text-lg sm:text-xl">SK</span>
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+              <img src="/images/logos/logoski.png" alt="SK Industries" className="w-full h-full object-contain" />
             </div>
             <div className="hidden sm:block">
               <div className="text-black text-base sm:text-lg font-bold">SK Industries</div>
@@ -31,9 +30,8 @@ export default function Header() {
           <div className="h-12 w-px bg-red-600"></div>
           
           <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center shadow-md">
-              {/* AS Industries Logo Placeholder */}
-              <span className="text-red-600 font-bold text-lg sm:text-xl">AS</span>
+            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center shadow-md overflow-hidden">
+              <img src="/images/logos/logoasi.png" alt="AS Industries" className="w-full h-full object-contain" />
             </div>
             <div className="hidden sm:block">
               <div className="text-black text-base sm:text-lg font-bold">AS Industries</div>
@@ -59,7 +57,7 @@ export default function Header() {
               href="https://wa.me/919422777786"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="px-4 py-2 border-2 border-red-600 text-red-600 rounded-lg font-semibold hover:bg-red-50 transition-colors"
             >
               WhatsApp
             </a>
@@ -97,7 +95,7 @@ export default function Header() {
               href="https://wa.me/919422777786"
               target="_blank"
               rel="noopener noreferrer"
-              className="block mt-2 text-center btn-primary"
+              className="block mt-2 text-center px-4 py-2 border-2 border-red-600 text-red-600 rounded-lg font-semibold hover:bg-red-50 transition-colors"
             >
               WhatsApp
             </a>

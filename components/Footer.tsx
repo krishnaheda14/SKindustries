@@ -6,9 +6,8 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-              <div className="w-10 h-10 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center">
-                {/* LOGO PLACEHOLDER */}
-                <span className="text-red-600 font-bold">SK</span>
+              <div className="w-10 h-10 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center overflow-hidden">
+                <img src="/images/logos/logoski.png" alt="SK Industries" className="w-full h-full object-contain" />
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold">SK Industries</h3>

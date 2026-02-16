@@ -96,12 +96,12 @@ export default function Categories() {
               {fittingMaterialOpen && (
                 <div className="mt-6 animate-fade-in">
                   {/* Placeholder for fitting material image */}
-                  <div className="mb-6 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-red-300">
-                    <svg className="w-24 h-24 mx-auto text-red-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                    <p className="text-gray-600 text-sm">Add fitting material image here</p>
-                    <p className="text-xs text-gray-500 mt-1">Path: /public/images/fitting-material.jpg</p>
+                  <div className="mb-6 rounded-lg overflow-hidden shadow-sm">
+                    <img src="/images/fitting-material.jpeg" alt="Shutter Fitting Material" className="w-full h-56 object-cover" />
+                    <div className="p-3 bg-white border-t border-red-50 text-center">
+                      <p className="text-gray-600 text-sm">Shutter fitting material sample</p>
+                      <p className="text-xs text-gray-500 mt-1">Path: /public/images/fitting-material.jpeg</p>
+                    </div>
                   </div>
                   
                   <ul className="space-y-3">
@@ -161,12 +161,12 @@ export default function Categories() {
               {frenchDoorOpen && (
                 <div className="mt-6 animate-fade-in">
                   {/* Placeholder for french door image */}
-                  <div className="mb-6 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg p-8 text-center border-2 border-dashed border-red-300">
-                    <svg className="w-24 h-24 mx-auto text-red-600 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
-                    </svg>
-                    <p className="text-gray-600 text-sm">Add French door image here</p>
-                    <p className="text-xs text-gray-500 mt-1">Path: /public/images/french-door.jpg</p>
+                  <div className="mb-6 rounded-lg overflow-hidden shadow-sm">
+                    <img src="/images/french-door.jpeg" alt="French Door Section" className="w-full h-56 object-cover" />
+                    <div className="p-3 bg-white border-t border-red-50 text-center">
+                      <p className="text-gray-600 text-sm">French door section sample</p>
+                      <p className="text-xs text-gray-500 mt-1">Path: /public/images/french-door.jpeg</p>
+                    </div>
                   </div>
 
                   <div className="space-y-4">

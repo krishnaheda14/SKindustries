@@ -47,7 +47,7 @@ Created 4 new interactive sections:
   
 **Image needed:**
 ```
-Path: /public/images/fitting-material.jpg
+Path: /public/images/fitting-material.jpeg
 Description: Photo of various shutter fitting materials
 Recommended size: 800x600px
 ```
@@ -65,7 +65,7 @@ Recommended size: 800x600px
 
 **Image needed:**
 ```
-Path: /public/images/french-door.jpg
+Path: /public/images/french-door.jpeg
 Description: Photo of French door section sample
 Recommended size: 800x600px
 ```
@@ -107,12 +107,12 @@ Updated theme in:
 
 2. **Fitting Material Image**:
    ```
-   /public/images/fitting-material.jpg (800x600px recommended)
+   /public/images/fitting-material.jpeg (800x600px recommended)
    ```
 
 3. **French Door Image**:
    ```
-   /public/images/french-door.jpg (800x600px recommended)
+   /public/images/french-door.jpeg (800x600px recommended)
    ```
 
 ### **Existing Images Used:**

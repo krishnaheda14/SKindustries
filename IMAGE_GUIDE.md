@@ -31,7 +31,7 @@ Replace with:
 ### 2. Fitting Material Image
 
 ```
-Location to add file: f:\skind\public\images\fitting-material.jpg
+Location to add file: f:\skind\public\images\fitting-material.jpeg
 Already referenced in: f:\skind\components\Categories.tsx
 
 The placeholder is already set up - just add the image to the path above.
@@ -41,7 +41,7 @@ Once added, the image will automatically appear in the Shutter Fitting Material 
 ### 3. French Door Image
 
 ```
-Location to add file: f:\skind\public\images\french-door.jpg
+Location to add file: f:\skind\public\images\french-door.jpeg
 Already referenced in: f:\skind\components\Categories.tsx
 
 The placeholder is already set up - just add the image to the path above.
@@ -57,8 +57,8 @@ f:\skind\public\images\
 ├── logos\
 │   ├── sk-logo.png
 │   └── as-logo.png
-├── fitting-material.jpg
-└── french-door.jpg
+├── fitting-material.jpeg
+└── french-door.jpeg
 ```
 
 ## Image Specifications

@@ -37,7 +37,7 @@ export default function ContactContent() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-industrial-accent focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                 />
               </div>
               <div>
@@ -47,7 +47,7 @@ export default function ContactContent() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-industrial-accent focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                 />
               </div>
               <div>
@@ -57,7 +57,7 @@ export default function ContactContent() {
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-industrial-accent focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                 />
               </div>
               <div>
@@ -67,10 +67,10 @@ export default function ContactContent() {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-industrial-accent focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                 />
               </div>
-              <button type="submit" className="btn-primary w-full text-sm sm:text-base">
+              <button type="submit" className="w-full px-4 py-3 border-2 border-red-600 text-red-600 rounded-lg font-semibold text-sm sm:text-base hover:bg-red-50 transition-colors">
                 Send via WhatsApp
               </button>
             </form>
@@ -81,8 +81,8 @@ export default function ContactContent() {
             {/* SK Industries */}
             <div className="card p-5 sm:p-6 md:p-8">
               <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center">
-                  <span className="text-red-600 font-bold text-lg sm:text-xl">SK</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img src="/images/logos/logoski.png" alt="SK" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">SK Industries</h2>
@@ -115,8 +115,8 @@ export default function ContactContent() {
             {/* AS Industries */}
             <div className="card p-5 sm:p-6 md:p-8">
               <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center">
-                  <span className="text-red-600 font-bold text-lg sm:text-xl">AS</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white border-2 border-red-600 rounded-lg flex items-center justify-center overflow-hidden">
+                  <img src="/images/logos/logoasi.png" alt="AS" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">AS Industries</h2>

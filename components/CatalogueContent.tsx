@@ -88,7 +88,7 @@ export default function CatalogueContent() {
           onClick={() => setZoomedImage(null)}
         >
           <button
-            className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-industrial-accent transition-colors z-10"
+            className="absolute top-4 right-4 text-white text-4xl font-bold hover:text-red-600 transition-colors z-10"
             onClick={() => setZoomedImage(null)}
           >
             ×

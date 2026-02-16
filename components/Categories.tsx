@@ -7,6 +7,7 @@ export default function Categories() {
   const [shutterPattiOpen, setShutterPattiOpen] = useState(false)
   const [fittingMaterialOpen, setFittingMaterialOpen] = useState(false)
   const [frenchDoorOpen, setFrenchDoorOpen] = useState(false)
+  const [laserOpen, setLaserOpen] = useState(false)
 
   const shutterPattiSizes = [
     { size: '6"', sizeKey: '6inch', description: 'Heavy-duty designs for maximum security', image: '/images/products/6-plain-patti(jumbo).png' },
@@ -135,27 +136,34 @@ export default function Categories() {
 
           {/* 3. Laser Cutting Designs Section */}
           <div className="card group fade-in-up scale-in stagger-2 bg-gradient-to-br from-white to-red-50 hover:scale-105 transition-all duration-300">
-            <Link href="/catalogue?tab=gallery">
-              <div className="w-full overflow-visible bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center p-4">
-                <img
-                  src="/images/gallery/gallery-page-2.jpg"
-                  alt="Laser Cutting Designs"
-                  className="max-w-full max-h-64 object-contain group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-8">
-                <div className="flex items-center justify-between gap-3">
-                  <h3 className="text-3xl font-bold mb-2 text-black group-hover:text-red-600 transition-colors duration-300 flex items-center gap-3">
-                    Laser Cutting Designs
-                    <svg className="w-5 h-5 text-gray-500 group-hover:text-red-600 transition-transform duration-300 transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </h3>
+            <div className="p-6">
+              <div className="flex items-center justify-between w-full">
+                <div>
+                  <h3 className="text-3xl font-bold mb-1 text-black group-hover:text-red-600 transition-colors duration-300">Laser Cutting Designs</h3>
+                  <p className="text-gray-600">Precision cutting for custom patterns and designs</p>
                 </div>
-                <p className="text-gray-600 mb-4">Precision cutting for custom patterns and designs</p>
-                <button className="btn-primary w-full">View Design Gallery</button>
+                <button aria-label="Toggle laser designs" className={`p-2 rounded-md text-red-600 hover:bg-red-50 transition-transform ${''}`} onClick={() => setLaserOpen(!laserOpen)}>
+                  <svg className={`w-6 h-6 transform transition-transform ${laserOpen ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
               </div>
-            </Link>
+
+              {laserOpen ? (
+                <div className="mt-4">
+                  <div className="w-full overflow-visible bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center p-4 rounded-md">
+                    <img src="/images/gallery/gallery-page-2.jpg" alt="Laser Cutting Designs" className="max-w-full max-h-64 object-contain" />
+                  </div>
+                  <div className="mt-4">
+                    <a href="/catalogue?tab=gallery" className="btn-primary w-full inline-flex items-center justify-center">View Design Gallery</a>
+                  </div>
+                </div>
+              ) : (
+                <div className="mt-4">
+                  <a href="/catalogue?tab=gallery" className="btn-primary w-full inline-flex items-center justify-center">View Design Gallery</a>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* 4. French Door Sections */}

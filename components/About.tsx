@@ -7,7 +7,7 @@ export default function About() {
             <h2 className="section-title mb-4 sm:mb-5 md:mb-6 text-3xl sm:text-4xl md:text-5xl glitter">About SK Industries</h2>
             <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
               <p className="fade-in-up stagger-1">
-                Established in <span className="font-bold text-red-600">1987</span>, SK Industries has been at the forefront of rolling shutter manufacturing in India for over three decades.
+                SK Industries has been at the forefront of rolling shutter manufacturing in India for over three decades. We specialize in manufacturing high-quality rolling shutter raw materials, precision laser cutting, and custom metal fabrication.
               </p>
               <p className="fade-in-up stagger-2">
                 We specialize in producing premium quality <span className="font-semibold text-black">Shutter Patti</span> (rolling shutter slats) in various sizes and designs, along with precision <span className="font-semibold text-black">laser cutting services</span>.

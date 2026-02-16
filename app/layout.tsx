@@ -12,7 +12,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'SK Industries | Rolling Shutter Raw Materials & Laser Cutting',
-  description: 'Leading manufacturer of rolling shutter raw materials and precision laser cutting services. Established 1987. Premium quality products for over 35 years.',
+  description: 'Leading manufacturer of rolling shutter raw materials and precision laser cutting services. Premium quality products for industrial and commercial applications.',
   keywords: 'rolling shutter, shutter patti, laser cutting, GI materials, Zincro, industrial manufacturing',
 }
 

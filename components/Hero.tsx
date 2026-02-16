@@ -40,7 +40,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 mb-6 sm:mb-7 md:mb-8 fade-in-up stagger-1">
-            Manufacturing excellence since 1987. Trusted by thousands for quality raw materials and precision laser cutting.
+            Trusted by thousands for quality raw materials and precision laser cutting.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 fade-in-up stagger-2">
             <a href="/catalogue" className="btn-primary text-center pulse-glow text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4">

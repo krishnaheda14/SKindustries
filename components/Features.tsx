@@ -1,7 +1,7 @@
 export default function Features() {
   const features = [
     {
-      title: '40+ Years Experience',
+      title: '39+ Years Experience',
       description: 'Trusted manufacturer with unmatched industry expertise',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -20,7 +20,7 @@ export default function Features() {
     },
     {
       title: 'Wide Range',
-      description: '15+ premium designs in 3", 4", 5", and 6" sizes',
+      description: '50+ premium designs in 3", 4", 5", and 6" sizes',
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />

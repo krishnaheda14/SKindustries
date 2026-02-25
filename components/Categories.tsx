@@ -17,11 +17,11 @@ export default function Categories() {
   ]
 
   const fittingMaterials = [
-    'Shutter Guide',
-    'Shutter Bottom',
-    'Spring',
-    'Bracket',
-    'Other Fitting Material'
+    { name: 'Shutter Guide', image: '/shutter-guide.jpeg' },
+    { name: 'Shutter Bottom', image: '/shutter-bottom.jpeg' },
+    { name: 'Spring', image: '/spring.jpeg' },
+    { name: 'Bracket', image: '/shutter-bracket.jpeg' },
+    { name: 'Other Fitting Material', image: null },
   ]
 
   return (
@@ -122,10 +122,13 @@ export default function Categories() {
                   <ul className="space-y-3">
                     {fittingMaterials.map((material, idx) => (
                       <li key={idx} className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-red-100">
-                        <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                        <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
                           {idx + 1}
                         </div>
-                        <span className="text-gray-800 font-semibold">{material}</span>
+                        {material.image && (
+                          <img src={material.image} alt={material.name} className="w-14 h-14 object-cover rounded-lg flex-shrink-0" />
+                        )}
+                        <span className="text-gray-800 font-semibold">{material.name}</span>
                       </li>
                     ))}
                   </ul>

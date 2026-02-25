@@ -24,7 +24,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm sm:text-base">
-              Leading manufacturer of premium rolling shutter raw materials and precision laser cutting services.
+              Since 1997, delivering complete solutions in industrial shutter systems, precision door sections, and custom laser cutting designs.
             </p>
           </div>
 
@@ -46,8 +46,13 @@ export default function Footer() {
               <p>Manmad Road, Ahmednagar</p>
               <p>Maharashtra 414003</p>
               <p className="pt-2">
-                <a href="tel:+919422777786" className="hover:text-red-600 transition-colors">
-                  +91 94227 77786
+                <a href="tel:+919834263091" className="hover:text-red-600 transition-colors">
+                  +91 98342 63091
+                </a>
+              </p>
+              <p>
+                <a href="tel:+917385852854" className="hover:text-red-600 transition-colors">
+                  +91 73858 52854
                 </a>
               </p>
             </div>

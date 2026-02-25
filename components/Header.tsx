@@ -16,7 +16,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white shadow-lg border-b-4 border-red-600">
       <nav className="container-custom">
         {/* Dual Company Logos Section */}
-        <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 py-4 border-b border-gray-200">
+        <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 py-2 sm:py-4 border-b border-gray-200">
           <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
             <img src="/images/logos/logoski.png" alt="SK Industries" className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
             <div className="hidden sm:block">
@@ -36,7 +36,7 @@ export default function Header() {
         </div>
 
         {/* Navigation Section */}
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12 sm:h-16">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 mx-auto">
             {navLinks.map((link) => (

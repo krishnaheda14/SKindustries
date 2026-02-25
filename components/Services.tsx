@@ -17,14 +17,14 @@ export default function Services() {
       title: 'Laser Cutting',
       description:
         'State-of-the-art precision laser cutting services for custom patterns and designs. Ideal for decorative panels, grilles, and architectural metalwork with fast turnaround.',
-      image: '/laser-cutting.jpeg',
+      image: '/images/french-door.png',
       link: '/catalogue?tab=gallery',
     },
     {
       title: 'Door Sections',
       description:
         'Premium French door sections in 16, 18, and 20 gauge. Available in plain, chamfer, and DD designs in 4"×2" and 5"×2½" sizes — built for durability and precision.',
-      image: '/door-sections.jpeg',
+      image: '/images/gallery/gallery-page-2.jpg',
       link: '/catalogue',
     },
   ]

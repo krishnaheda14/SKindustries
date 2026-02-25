@@ -124,7 +124,8 @@ git push
 
 ## Contact
 
-- **Phone**: +91 94227 77786
+- **Phone (WhatsApp)**: +91 9834263091
+- **Phone**: +91 7385852854
 - **Location**: 1/8 Savedi Naka, Manmad Road, Ahmednagar, Maharashtra 414003
 - **Established**: 1981
 

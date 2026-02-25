@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       className="relative text-black py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden transition-all duration-300"
-      style={{ background: '#ffffff' }}
+      style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 40%, #fffaf6 100%)' }}
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">

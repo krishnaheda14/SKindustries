@@ -24,9 +24,12 @@ export default function Categories() {
     { name: 'Other Fitting Material', image: null },
   ]
 
+  const [modalImage, setModalImage] = useState<string | null>(null)
+
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container-custom">
+    <>
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container-custom">
         <h2 className="section-title text-center glitter">Our Product Range</h2>
         <p className="section-subtitle text-center mb-12">
           Comprehensive selection of rolling shutter raw materials
@@ -121,12 +124,14 @@ export default function Categories() {
                   
                   <ul className="space-y-3">
                     {fittingMaterials.map((material, idx) => (
-                      <li key={idx} className="flex items-center gap-3 p-3 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-red-100">
+                      <li key={idx} className="flex items-center gap-4 p-3 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-red-100">
                         <div className="w-10 h-10 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
                           {idx + 1}
                         </div>
                         {material.image && (
-                          <img src={material.image} alt={material.name} className="w-14 h-14 object-cover rounded-lg flex-shrink-0" />
+                          <button type="button" onClick={() => setModalImage(material.image)} className="flex-shrink-0">
+                            <img src={material.image} alt={material.name} className="w-28 h-28 object-contain rounded-lg" />
+                          </button>
                         )}
                         <span className="text-gray-800 font-semibold">{material.name}</span>
                       </li>
@@ -230,7 +235,15 @@ export default function Categories() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+      {modalImage && (
+        <div onClick={() => setModalImage(null)} className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+          <div className="max-w-5xl max-h-[90vh] overflow-auto p-4">
+            <img src={modalImage ?? undefined} alt="zoom" className="w-full h-auto object-contain rounded-lg" onClick={(e) => e.stopPropagation()} />
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 

@@ -1,4 +1,10 @@
+"use client"
+
+import { useState } from 'react'
+
 export default function Services() {
+  const [modalImage, setModalImage] = useState<string | null>(null)
+
   const services = [
     {
       title: 'Rolling Shutter',
@@ -41,37 +47,41 @@ export default function Services() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image */}
-              <div className="relative h-52 sm:h-56 md:h-60 overflow-hidden bg-gray-100">
+                <div className="relative h-80 sm:h-80 md:h-96 overflow-hidden bg-gray-100">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                    onClick={() => setModalImage(service.image)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                 <div className="absolute bottom-3 left-4">
                   <span className="text-white font-bold text-xl drop-shadow-lg">{service.title}</span>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-5 sm:p-6">
-                <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
-                  {service.description}
-                </p>
-                <a
-                  href={service.link}
-                  className="inline-flex items-center gap-2 text-red-600 font-semibold hover:gap-3 transition-all duration-200 text-sm sm:text-base"
-                >
-                  Learn More
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
+                {/* Content */}
+                <div className="p-5 sm:p-6">
+                  <a
+                    href={service.link}
+                    className="inline-flex items-center gap-2 text-red-600 font-semibold hover:gap-3 transition-all duration-200 text-sm sm:text-base"
+                  >
+                    Learn More
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
             </div>
           ))}
         </div>
       </div>
+      {modalImage && (
+        <div onClick={() => setModalImage(null)} className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+          <div className="max-w-5xl max-h-[90vh] overflow-auto p-4">
+            <img src={modalImage} alt="zoom" className="w-full h-auto object-contain rounded-lg" onClick={(e) => e.stopPropagation()} />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

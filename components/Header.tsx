@@ -18,9 +18,7 @@ export default function Header() {
         {/* Dual Company Logos Section */}
         <div className="flex items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 py-4 border-b border-gray-200">
           <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
-              <img src="/images/logos/logoski.png" alt="SK Industries" className="w-full h-full object-contain" />
-            </div>
+            <img src="/images/logos/logoski.png" alt="SK Industries" className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
             <div className="hidden sm:block">
               <div className="text-black text-base sm:text-lg font-bold">SK Industries</div>
             </div>
@@ -29,9 +27,7 @@ export default function Header() {
           <div className="h-12 w-px bg-red-600"></div>
           
           <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-lg flex items-center justify-center shadow-md overflow-hidden">
-              <img src="/images/logos/logoasi.png" alt="AS Industries" className="w-full h-full object-contain" />
-            </div>
+            <img src="/images/logos/logoasi.png" alt="AS Industries" className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
             <div className="hidden sm:block">
               <div className="text-black text-base sm:text-lg font-bold">AS Industries</div>
               <div className="text-gray-600 text-xs">Quality Assured</div>

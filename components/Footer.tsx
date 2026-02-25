@@ -6,18 +6,14 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                <img src="/images/logos/logoski.png" alt="SK Industries" className="w-full h-full object-contain" />
-              </div>
+              <img src="/images/logos/logoski.png" alt="SK Industries" className="w-10 h-10 object-contain" />
               <div>
                 <h3 className="text-lg sm:text-xl font-bold">SK Industries</h3>
                 <p className="text-gray-400 text-xs sm:text-sm">GSTIN - 27ARAPS8931K1Z9</p>
               </div>
             </div>
             <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                <img src="/images/logos/logoasi.png" alt="AS Industries" className="w-full h-full object-contain" />
-              </div>
+              <img src="/images/logos/logoasi.png" alt="AS Industries" className="w-10 h-10 object-contain" />
               <div>
                 <h3 className="text-lg sm:text-xl font-bold">AS Industries</h3>
                 <p className="text-gray-400 text-xs sm:text-sm">GSTIN - 27OHUPS6745F1Z7</p>

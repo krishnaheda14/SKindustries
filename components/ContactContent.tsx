@@ -81,9 +81,7 @@ export default function ContactContent() {
             {/* SK Industries */}
             <div className="card p-5 sm:p-6 md:p-8">
               <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                  <img src="/images/logos/logoski.png" alt="SK" className="w-full h-full object-contain" />
-                </div>
+                <img src="/images/logos/logoski.png" alt="SK" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">SK Industries</h2>
                   <p className="text-gray-500 text-xs sm:text-sm font-mono">GSTIN: 27ARAPS8931K1Z9</p>
@@ -117,12 +115,10 @@ export default function ContactContent() {
               </div>
             </div>
 
-            {/* AS Industries */}}
+            {/* AS Industries */}
             <div className="card p-5 sm:p-6 md:p-8">
               <div className="flex items-center space-x-3 mb-3 sm:mb-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
-                  <img src="/images/logos/logoasi.png" alt="AS" className="w-full h-full object-contain" />
-                </div>
+                <img src="/images/logos/logoasi.png" alt="AS" className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                 <div>
                   <h2 className="text-xl sm:text-2xl font-bold">AS Industries</h2>
                   <p className="text-gray-500 text-xs sm:text-sm font-mono">GSTIN: 27OHUPS6745F1Z7</p>

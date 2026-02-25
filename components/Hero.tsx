@@ -1,29 +1,8 @@
-"use client"
-
-import { useState, useEffect } from 'react'
-
 export default function Hero() {
-  const [mousePos, setMousePos] = useState({ x: 50, y: 50 })
-
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth) * 100
-      const y = (e.clientY / window.innerHeight) * 100
-      setMousePos({ x, y })
-    }
-    window.addEventListener('mousemove', onMove)
-    return () => window.removeEventListener('mousemove', onMove)
-  }, [])
-
   return (
     <section
       className="relative text-black py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden transition-all duration-300"
-      style={{
-        background: `
-          radial-gradient(circle at ${mousePos.x}% ${mousePos.y}%, rgba(220, 20, 60, 0.10) 0%, transparent 50%),
-          linear-gradient(135deg, #ffffff 0%, #fffaf9 30%, #fff5f5 60%, #ffffff 100%)
-        `,
-      }}
+      style={{ background: '#ffffff' }}
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -66,9 +45,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Subtle decorative elements */}
-      <div className="absolute top-0 right-0 w-44 sm:w-56 md:w-72 h-44 sm:h-56 md:h-72 bg-red-600 opacity-6 rounded-full blur-3xl float"></div>
-      <div className="absolute bottom-0 left-0 w-44 sm:w-56 md:w-72 h-44 sm:h-56 md:h-72 bg-red-500 opacity-6 rounded-full blur-3xl float" style={{ animationDelay: '1s' }}></div>
+
     </section>
   )
 }

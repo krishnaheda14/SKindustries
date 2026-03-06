@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 text-sm sm:text-base">
-              Since 1997, delivering complete solutions in industrial shutter systems, precision door sections, and custom laser cutting designs.
+              Since 1997, SK Industries (SKI) &amp; AS Industries (ASI) — based at Savedi Naka, Ahmednagar — deliver rolling shutter raw materials, precision CNC laser cutting, GI door sections &amp; mild steel fabrication across Maharashtra.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Contact Us</h3>
-            <div className="space-y-1.5 sm:space-y-2 text-gray-400 text-sm sm:text-base">
+            <address className="not-italic space-y-1.5 sm:space-y-2 text-gray-400 text-sm sm:text-base">
               <p>1/8 Savedi Naka</p>
               <p>Manmad Road, Ahmednagar</p>
               <p>Maharashtra 414003</p>
@@ -51,12 +51,15 @@ export default function Footer() {
                   +91 73858 52854
                 </a>
               </p>
-            </div>
+            </address>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} SK Industries & AS Industries. All rights reserved.</p>
+          <p className="text-xs text-gray-500 mb-2">
+            Serving Ahmednagar, Pune, Nashik &amp; all Maharashtra · Rolling Shutter Patti · CNC Laser Cutting · GI Door Sections · MS Fabrication
+          </p>
+          <p>&copy; {new Date().getFullYear()} SK Industries &amp; AS Industries. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -2,8 +2,14 @@ import { Suspense } from 'react'
 import CatalogueContent from '@/components/CatalogueContent'
 
 export const metadata = {
-  title: 'Product Catalogue | SK Industries',
-  description: 'Browse our complete range of rolling shutter patti designs and laser cutting services',
+  title: 'Product Catalogue – Rolling Shutter Patti, GI Door Sections & Laser Cutting',
+  description:
+    'Browse SK Industries complete catalogue: rolling shutter patti in 3", 4", 5", 6" sizes, GI door sections (16/18/20 gauge), CNC laser cutting designs & fitting materials. Best quality shutter patti manufacturer in Ahmednagar, Maharashtra.',
+  keywords:
+    'rolling shutter patti catalogue, shutter patti designs, GI door sections, laser cutting designs Ahmednagar, shutter fitting materials, SK Industries catalogue, MS door frame, commercial shutter manufacturer',
+  alternates: {
+    canonical: 'https://skindustries.in/catalogue',
+  },
 }
 
 export default function CataloguePage() {

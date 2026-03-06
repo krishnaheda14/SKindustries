@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <url>
+    <loc>https://skindustries.in/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://skindustries.in/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://skindustries.in/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://skindustries.in/catalogue/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://skindustries.in/catalogue/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://skindustries.in/catalogue/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+  <url>
+    <loc>https://skindustries.in/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en-IN" href="https://skindustries.in/contact/"/>
+    <xhtml:link rel="alternate" hreflang="mr-IN" href="https://skindustries.in/contact/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-07</lastmod>
+  </url>
+</urlset>

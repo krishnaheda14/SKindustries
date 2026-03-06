@@ -7,13 +7,13 @@ export default function About() {
             <h2 className="section-title mb-4 sm:mb-5 md:mb-6 text-3xl sm:text-4xl md:text-5xl glitter">About SK Industries</h2>
             <div className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
               <p className="fade-in-up stagger-1">
-                Since 1997, SK Industries has been at the forefront of rolling shutter manufacturing in India. We specialize in manufacturing high-quality rolling shutter raw materials, precision laser cutting, and custom metal fabrication.
+                Since 1997, SK Industries – based in <strong>Ahmednagar, Maharashtra</strong> – has been at the forefront of rolling shutter manufacturing, CNC laser cutting services, and mild steel fabrication across India.
               </p>
               <p className="fade-in-up stagger-2">
-                We specialize in producing premium quality <span className="font-semibold text-black">Shutter Patti</span> (rolling shutter slats) in various sizes and designs, along with precision <span className="font-semibold text-black">laser cutting services</span>.
+                We specialize in producing premium quality <span className="font-semibold text-black">Shutter Patti</span> (rolling shutter slats) in 3", 4", 5", and 6" sizes, along with precision <span className="font-semibold text-black">CNC laser cutting</span>, <span className="font-semibold text-black">GI door sections</span>, and <span className="font-semibold text-black">MS door frames</span>.
               </p>
               <p className="fade-in-up stagger-3">
-                Our commitment to quality and customer satisfaction has made us a trusted name among dealers, fabricators, and contractors across the country.
+                Our commitment to quality makes us a trusted name for laser cutting, MS fabrication, and rolling shutter components among dealers, fabricators, and contractors across Maharashtra and India.
               </p>
             </div>
             <div className="mt-6 sm:mt-7 md:mt-8 flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6 fade-in-up stagger-4">

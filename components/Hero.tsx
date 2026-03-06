@@ -4,6 +4,45 @@ export default function Hero() {
       className="relative text-black py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden transition-all duration-300"
       style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f8fafc 40%, #fffaf6 100%)' }}
     >
+      {/* ── Hidden SEO content – visible to crawlers & screen readers ── */}
+      <h1 className="sr-only">
+        Mild Steel Fabrication &amp; Laser Cutting Services in Ahmednagar | SK Industries |
+        अहमदनगर मधील स्टील फॅब्रिकेशन सेवा
+      </h1>
+      <div className="sr-only">
+        <p>
+          SK Industries is a leading laser cutting services provider and mild steel fabrication
+          company in Ahmednagar, Maharashtra. We offer precision CNC laser cutting, MS
+          fabrication, GI door sections, and rolling shutter components since 1997.
+        </p>
+        <p>
+          Services: Laser cutting services in Ahmednagar · CNC laser cutting Maharashtra ·
+          Metal laser cutting Ahmednagar · Mild steel fabrication · MS fabrication manufacturer
+          Maharashtra · Steel fabrication company · Savedi Naka metal industry ·
+          Manmad Road fabrication workshop
+        </p>
+        <p>
+          Products: GI door section manufacturer · MS door frame manufacturer · Rolling shutter
+          parts manufacturer · Commercial shutter manufacturer · Shutter patti manufacturer ·
+          Galvanized door section · Rolling shutter components Ahmednagar
+        </p>
+        <p>
+          लेझर कटिंग सेवा अहमदनगर · सीएनसी लेझर कटिंग सेवा · मेटल लेझर कटिंग अहमदनगर ·
+          स्टील फॅब्रिकेशन कंपनी · एमएस फॅब्रिकेशन निर्माता · लोखंडी फॅब्रिकेशन सेवा ·
+          GI डोअर सेक्शन निर्माता · दरवाजा फ्रेम निर्माता · गॅल्वनाईज्ड डोअर सेक्शन
+        </p>
+        <p>
+          रोलिंग शटर पार्ट्स निर्माता · अहमदनगर मधील लेझर कटिंग सेवा ·
+          अहमदनगर स्टील फॅब्रिकेशन कंपनी · सावेदी नाका मेटल इंडस्ट्री ·
+          मनमाड रोड फॅब्रिकेशन वर्कशॉप · महाराष्ट्रातील शटर निर्माता
+        </p>
+        <address>
+          SK Industries, 1/8 Savedi Naka, Manmad Road, Ahmednagar, Maharashtra 414003.
+          GSTIN: 27ARAPS8931K1Z9. Phone: +91 98342 63091 / +91 73858 52854.
+        </address>
+      </div>
+      {/* ── End hidden SEO content ── */}
+
       <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative z-10">

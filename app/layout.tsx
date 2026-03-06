@@ -21,21 +21,52 @@ export const metadata: Metadata = {
   },
   description: 'SK Industries & AS Industries – Trusted manufacturer of rolling shutter raw materials, precision CNC laser cutting, GI door sections, MS door frames & mild steel fabrication in Ahmednagar, Maharashtra. Serving since 1997. Call +91 98342 63091.',
   keywords: [
+    // English – core services
     'laser cutting', 'laser cutting services in Ahmednagar', 'CNC laser cutting Maharashtra',
-    'laser cutting Ahmednagar', 'metal laser cutting Ahmednagar',
+    'laser cutting Ahmednagar', 'metal laser cutting Ahmednagar', 'laser cutting Ahilyanagar',
+    'CNC laser cutting Ahmednagar', 'laser cutting near me Ahmednagar', 'metal cutting Ahmednagar',
+    'sheet metal laser cutting', 'steel laser cutting', 'GI sheet laser cutting',
+    'laser cut jali', 'laser cut grille', 'decorative laser cut panels', 'laser cut designs',
+    // English – fabrication
     'mild steel fabrication', 'MS fabrication manufacturer Maharashtra', 'steel fabrication company',
+    'MS fabrication Ahmednagar', 'metal fabrication Ahmednagar', 'steel fabrication Ahilyanagar',
+    'fabrication workshop Ahmednagar', 'steel contractor Maharashtra', 'iron fabrication',
+    // English – door sections
     'GI door section manufacturer', 'MS door frame manufacturer', 'door frame manufacturer Ahmednagar',
+    'door section manufacturer Maharashtra', 'French door section', 'galvanized door section',
+    'door section 16 gauge', 'door section 18 gauge', 'door section 20 gauge',
+    'plain door section', 'chamfer door section', 'DD design door section',
+    '4x2 door section', '5x2.5 door section',
+    // English – rolling shutter
     'rolling shutter parts manufacturer', 'rolling shutter patti', 'shutter patti manufacturer',
-    'commercial shutter manufacturer', 'rolling shutter components',
+    'shutter patti Ahmednagar', 'rolling shutter slats', 'shutter patti 3 inch',
+    'shutter patti 4 inch', 'shutter patti 5 inch', 'shutter patti 6 inch',
+    'commercial shutter manufacturer', 'rolling shutter components', 'rolling shutter raw material',
+    'shutter guide', 'shutter bottom', 'shutter spring', 'shutter bracket',
+    'GI patti', 'zincro patti', 'galvanized shutter patti',
+    // Product names
+    'Deluxe Lining patti', 'Hole Perforated patti', 'Laxmi No 1 patti', 'Laxmi No 2 patti',
+    'O Hole Perforated patti', 'Plain Patti', 'Regular Super Round patti',
+    'Slot Design patti', 'Vikas Deluxe patti', 'Vikas Perforated', 'Vikas Plain',
+    'Ganesh Perforated patti', 'Ganesh Plain patti', 'Ganesh Deluxe patti',
+    'Jumbo Perforated patti', 'Jumbo patti', 'Plain Patti Jumbo',
+    // Company / location
     'SK Industries Ahmednagar', 'AS Industries', 'metal fabrication Ahmednagar',
     'Savedi Naka Ahmednagar', 'Manmad Road industry', 'Maharashtra fabrication workshop',
-    'लेझर कटिंग सेवा अहमदनगर', 'सीएनसी लेझर कटिंग सेवा',
+    'Ahilyanagar industry', 'Ahilyanagar metal', 'Ahmednagar manufacturing',
+    'Nagar city industrial', 'Savedi Naka metal industry',
+    // Marathi
+    'लेझर कटिंग सेवा अहमदनगर', 'सीएनसी लेझर कटिंग सेवा', 'अहिल्यानगर लेझर कटिंग',
     'मेटल लेझर कटिंग अहमदनगर', 'स्टील फॅब्रिकेशन कंपनी',
     'एमएस फॅब्रिकेशन निर्माता', 'लोखंडी फॅब्रिकेशन सेवा',
     'GI डोअर सेक्शन निर्माता', 'दरवाजा फ्रेम निर्माता', 'गॅल्वनाईज्ड डोअर सेक्शन',
     'रोलिंग शटर पार्ट्स निर्माता', 'अहमदनगर स्टील फॅब्रिकेशन कंपनी',
     'सावेदी नाका मेटल इंडस्ट्री', 'मनमाड रोड फॅब्रिकेशन वर्कशॉप',
-    'महाराष्ट्रातील शटर निर्माता',
+    'महाराष्ट्रातील शटर निर्माता', 'शटर पट्टी अहमदनगर', 'शटर पट्टी निर्माता',
+    'रोलिंग शटर पट्टी', 'जीआय पट्टी', 'अहिल्यानगर उद्योग', 'धातू कटिंग अहमदनगर',
+    // Hindi
+    'शटर पट्टी', 'रोलिंग शटर पार्ट्स', 'दरवाजा फ्रेम', 'लेजर कटिंग सेवा',
+    'स्टील फैब्रिकेशन अहमदनगर', 'जाली कटिंग', 'धातु काटना',
   ].join(', '),
   authors: [{ name: 'SK Industries', url: SITE_URL }],
   creator: 'SK Industries',
@@ -91,6 +122,77 @@ export const metadata: Metadata = {
   //   google: 'YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE',
   //   yandex: 'YOUR_YANDEX_VERIFICATION_CODE',
   // },
+}
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Where can I buy rolling shutter patti in Ahmednagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SK Industries at 1/8 Savedi Naka, Manmad Road, Ahmednagar (Ahilyanagar) 414003 is the leading rolling shutter patti manufacturer and supplier in Ahmednagar, Maharashtra. Call +91 98342 63091.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who is the best rolling shutter manufacturer in Ahmednagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SK Industries and AS Industries are the most trusted rolling shutter patti manufacturers in Ahmednagar (Ahilyanagar), Maharashtra since 1997, with 39+ years of experience and 10,000+ satisfied customers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What sizes of shutter patti are available?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SK Industries manufactures rolling shutter patti in 3 inch, 4 inch, 5 inch, and 6 inch sizes. Available in GI (galvanized iron) and zincro finish with 50+ designs including plain, perforated, deluxe, and decorative.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does SK Industries offer laser cutting services in Ahmednagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. SK Industries provides precision CNC laser cutting services in Ahmednagar (Ahilyanagar), Maharashtra for custom metal patterns, decorative panels, jali cutting, grilles, and architectural metalwork.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where to get GI door sections manufactured in Ahmednagar?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SK Industries manufactures premium GI door sections and MS door frames in Ahmednagar, Maharashtra. Available in 16, 18, and 20 gauge in plain, chamfer, and DD designs in 4x2 and 5x2.5 inch sizes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the price of rolling shutter patti in Maharashtra?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For the latest rolling shutter patti price list, contact SK Industries at +91 98342 63091. We offer competitive wholesale and retail pricing for all sizes of shutter patti from our factory in Ahmednagar, Maharashtra.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does SK Industries supply shutter patti to other cities in Maharashtra?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, SK Industries supplies rolling shutter patti, fitting materials, door sections, and laser cutting products to Pune, Nashik, Aurangabad, Shirdi, Sangamner, Shrirampur, Kopargaon, Rahuri and all districts of Maharashtra.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What shutter patti designs are available at SK Industries?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Popular designs: Laxmi No 1, Laxmi No 2, Vikas Plain, Vikas Deluxe, Vikas Perforated, Ganesh Plain, Ganesh Perforated, Ganesh Deluxe With Lining, Slot Design, Regular Super Round, Hole Perforated, O Hole Perforated, Deluxe Lining, Jumbo Perforated, Plain Patti (all sizes 3", 4", 5", 6").',
+      },
+    },
+  ],
 }
 
 const jsonLd = {
@@ -245,6 +347,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       </head>
       <body>

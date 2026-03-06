@@ -5,6 +5,7 @@ import Services from '@/components/Services'
 import Features from '@/components/Features'
 import About from '@/components/About'
 import CTA from '@/components/CTA'
+import SeoKeywords from '@/components/SeoKeywords'
 
 export const metadata: Metadata = {
   title: 'SK Industries | Mild Steel Fabrication & Laser Cutting Services in Ahmednagar',
@@ -24,6 +25,7 @@ export default function Home() {
       <Features />
       <About />
       <CTA />
+      <SeoKeywords />
     </>
   )
 }
